@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shark Bait - Home</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'band/styles.css' %}">
+  </head>
+  <body>
+    <header>
+      <h1>Shark Bait</h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'members' %}">Band Members</a></li>
+          <li><a href="{% url 'album' %}">Album</a></li>
+          <li><a href="{% url 'register' %}">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Welcome to the Official Shark Bait Website!</h2>
+      <p>We're a rock band that feeds off fame. Join us on our journey to the top!</p>
+      <section class="album-preview">
+        <h3>Our First Album: Tidal Waves</h3>
+        <p>Get ready for an unforgettable musical experience.</p>
+        <a href="{% url 'album' %}" class="btn">Listen Now</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Shark Bait. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

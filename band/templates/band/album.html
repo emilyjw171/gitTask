@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shark Bait - Album</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'band/styles.css' %}">
+  </head>
+  <body>
+    <header>
+      <h1>Shark Bait - Tidal Waves</h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'album' %}">Album</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Our First Album: Tidal Waves</h2>
+      <ul class="song-list">
+        {% for song in songs %}
+          <li class="song-item">
+            <h3>{{ song.title }}</h3>
+            <p>Released on {{ song.release_date }}</p>
+          </li>
+        {% empty %}
+          <li>No songs available.</li>
+        {% endfor %}
+      </ul>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Shark Bait. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

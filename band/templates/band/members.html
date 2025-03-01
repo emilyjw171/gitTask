@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shark Bait - Band Members</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'band/styles.css' %}">
+  </head>
+  <body>
+    <header>
+      <h1>Shark Bait - Band Members</h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'members' %}">Band Members</a></li>
+          <li><a href="{% url 'album' %}">Album</a></li>
+          <li><a href="{% url 'register' %}">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Meet the Band</h2>
+      <div class="member-list">
+        <div class="member">
+          <h3>Blacktip</h3>
+          <p>The Lead Singer</p>
+        </div>
+        <div class="member">
+          <h3>Angler</h3>
+          <p>The Drummer</p>
+        </div>
+        <div class="member">
+          <h3>Barracuda</h3>
+          <p>The Guitarist</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Shark Bait. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
