@@ -82,7 +82,7 @@ pip install sphinx
 
 ### **2️) Initialize Sphinx**
 ```sh
-sphinx-quickstart docs
+sphinx-quickstart
 ```
 Follow the prompts and choose:
 - Separate source and build directories? **Yes**
