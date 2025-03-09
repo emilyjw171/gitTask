@@ -3,16 +3,13 @@ from django.db import models
 
 class Song(models.Model):
     """
-    Represents a song in the database with a title, album, and release date.
+    Represents a song in the database.
 
-    Attributes:
-        title (CharField): The title of the song.
-        album (CharField): The album to which the song belongs.
-        release_date (DateField): The release date of the song.
-
-    Methods:
-        __str__(): Returns a string representation of the song's title.
+    :ivar title: The title of the song.
+    :ivar album: The album to which the song belongs.
+    :ivar release_date: The release date of the song.
     """
+
     title = models.CharField(max_length=100)
     album = models.CharField(max_length=100)
     release_date = models.DateField()
@@ -21,7 +18,7 @@ class Song(models.Model):
         """
         Returns the string representation of the song (its title).
 
-        Returns:
-            str: The title of the song.
+        :return: The title of the song.
+        :rtype: str
         """
         return self.title
